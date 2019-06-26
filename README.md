@@ -14,7 +14,7 @@
     4.AbstractBeanFactory 初步实现了从BeanContainer容器里获取bean的操作
     5.AnnotationBeanFactory 实现了扫描对应的自定义注解，实例化bean并存到IOC容器里
     类关系图如下：
-![Image text](../Ioc/IOC.png)
+![Image text](../IOC.png)
 ### 启动IOC容器&实例化Bean
     IOC的启动流程 new AnnotationBeanFactory(Class primarySources)-->得到工程的根包名-->扫描根包里所以的类通过判断获取到使用了@Component注解修饰的类和被@Bean注解修饰的方法名
     -->通过反射实例化对应bean-->存放到IOC容器里（如果bean已存在则报'The bean has defined' Exception）
