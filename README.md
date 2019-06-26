@@ -16,7 +16,9 @@
     类关系图如下：
 ![Image text](https://github.com/wpf008/Ioc/blob/master/image/IOC.png)
 ### 启动IOC容器&实例化Bean
-    IOC的启动流程 new AnnotationBeanFactory(Class primarySources)-->得到工程的根包名-->扫描根包里所以的类通过判断获取到使用了@Component注解修饰的类和被@Bean注解修饰的方法名
+    IOC的启动流程 new AnnotationBeanFactory(Class primarySources)
+    -->得到工程的根包名
+    -->扫描根包里所以的类通过判断获取到使用了@Component注解修饰的类和被@Bean注解修饰的方法名
     -->通过反射实例化对应bean-->存放到IOC容器里（如果bean已存在则报'The bean has defined' Exception）
     这样整个IOC的启动流程和实例化bean就已经完成
 ### 获取对应的Bean
